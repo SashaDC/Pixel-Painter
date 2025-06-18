@@ -61,3 +61,25 @@ footer {
   align-items: center; /* centers horizontally */
   text-align: center;
 }
+
+input[type='color'] {
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none;
+  border: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: 3.5px solid #a2a2a2;
+  border-radius: 50%;
+}
