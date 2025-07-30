@@ -8,6 +8,6 @@ function App() {
   if (gridSize === null) {
     return <Select gridSelect={setGridSize} />
   }
-  return <Painter goBack={setGridSize} />
+  return <Painter setGridSize={setGridSize} gridSize={gridSize} />
 }
 export default App
