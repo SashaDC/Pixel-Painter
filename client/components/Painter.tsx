@@ -22,7 +22,7 @@ function Painter({ gridSize, setGridSize }: Props) {
       <div className="container">
         <div className="tools">
           {/* <ToolPanel /> */}
-          <h1>Toools placement</h1>{' '}
+          <h1 id="tools">Toools placement</h1>{' '}
           {/* I'll place the tools in its own separate file*/}
           <input
             type="color"
@@ -33,11 +33,10 @@ function Painter({ gridSize, setGridSize }: Props) {
         </div>
         <div className="canvas">
           <Grid value={selectedColor} gridSize={gridSize} />
-          <h2>Grid placement</h2>
         </div>
       </div>
-      <p>I don't know right now</p>
-      <div className="buttons-holder button-bottom">
+      <h2>Grid placement</h2>
+      <div className="buttons-holder">
         <button onClick={() => setGridSize(null)}>Back</button>
       </div>
     </div>
