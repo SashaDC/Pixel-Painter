@@ -84,16 +84,29 @@ input[type='color']::-webkit-color-swatch {
   border-radius: 50%;
 }
 
+input[type='color'] {
+  margin: 1.5rem;
+}
+
 #grid-container {
   display: grid;
   margin: auto;
-  width: 12rem;
+  width: 17rem;
 }
 
 .grid-cell {
   background-color: rgb(230, 230, 230);
-  width: 3rem;
-  height: 3rem;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+.grid-cell:hover {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: inset 0 0 0 2px rgba(175, 175, 175, 0.6);
+}
+
+#tools {
+  margin: auto;
 }
 
 /* Make a box and center/size it
