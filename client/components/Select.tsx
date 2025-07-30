@@ -10,9 +10,10 @@ function Select({ gridSelect }: Props) {
         <h2>Select a grid size:</h2>
       </header>
       <div className="buttons-holder">
-        <button onClick={() => gridSelect(16)}>x16</button>
+        <button onClick={() => gridSelect(4)}>x4</button>
+        {/* Need to fix:
         <button onClick={() => gridSelect(32)}>x32</button>
-        <button onClick={() => gridSelect(64)}>x64</button>
+        <button onClick={() => gridSelect(64)}>x64</button> */}
       </div>
       <footer>
         <p className="author">A project made by SashaDC</p>
