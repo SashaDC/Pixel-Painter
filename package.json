@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "render:build": "npm install && npm run build && npm prune --omit=dev",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
