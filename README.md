@@ -1,6 +1,6 @@
 # Pixel Painter 🎨
 
-A basic pixel painter built with React, TypeScript, and Vite.
+A basic pixel painter built with React, TypeScript, Vite and uses 'html2canvas' to render and download the data as a .PNG file.
 
 ## About the Project
 
