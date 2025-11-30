@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import Grid from './Grid'
+import Download from './Download'
 // import ToolPanel from './Tools'
 
 type Props = {
@@ -13,8 +14,16 @@ type Props = {
 
 function Painter({ gridSize, setGridSize }: Props) {
   const [selectedColor, setSelectedColor] = useState('#000000') //Sets the default color to black
+
   const handleColorChange = (event: any) => {
     setSelectedColor(event.target.value) // when activated it will change the color to whatever thing updated it
+  }
+
+  // Takes user back to home page and removes the cell data from the local storage.
+  const handleClick = () => {
+    setGridSize(null)
+    localStorage.removeItem('gridSize')
+    localStorage.removeItem(`Grid-Data:${gridSize}`)
   }
 
   return (
@@ -37,7 +46,8 @@ function Painter({ gridSize, setGridSize }: Props) {
       </div>
       <h2>Grid placement</h2>
       <div className="buttons-holder">
-        <button onClick={() => setGridSize(null)}>Back</button>
+        <button onClick={Download}>Download</button>
+        <button onClick={handleClick}>Back</button>
       </div>
     </div>
   )
