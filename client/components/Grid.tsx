@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 type Props = {
   value: string
@@ -12,6 +12,19 @@ function Grid({ gridSize, value }: Props) {
   const [cellColors, setCellColors] = useState(
     Array(totalGridCells).fill('#fff')
   )
+
+  useEffect(() => {
+    // Load from localStorage
+    const saved = localStorage.getItem(`Grid-Data:${gridSize}`)
+    if (saved) {
+      setCellColors(JSON.parse(saved))
+    }
+  }, [gridSize])
+
+  useEffect(() => {
+    // Save to localStorage
+    localStorage.setItem(`Grid-Data:${gridSize}`, JSON.stringify(cellColors))
+  }, [cellColors, gridSize])
 
   const handleClick = (i: number) => {
     console.log('Clicked cell', i, 'with color', value)
